@@ -28,12 +28,12 @@ class AWSSearchDB:
 
     def export_anamnesis_to_file(self, filename):
         query = {
-            'size': 1000
+            'size': 15000
         }
 
         response = self.client.search(
             body=query,
-            index='bapdb-reports-prod-6'
+            index='bapdb-reports-prod-7'
         )
 
         file1 = open(filename, "w")
